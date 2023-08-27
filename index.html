@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong</title>
+</head>
+<style>
+    *{
+        margin : 0;
+        padding : 0;
+    }
+    #gamebox{
+        width: 100vw;
+        height : 100vh;
+        background-color: #000;
+        position: absolute;
+        overflow:hidden;
+    }
+    #userscore,#aiscore{
+        color: rgb(255,255,255);
+        font-size: 50px;
+        position:absolute;
+        top:12px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #userscore{
+        left:40%;
+    }
+    #aiscore{
+        right: 40%;
+    }
+    .dashlinevertical{
+        border-left: 2px dashed #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        transform: translateX(-50%) 
+    }
+    #userpaddle{
+        width: 20px;
+        background-color: red;
+        height: 100px;
+        position: absolute;
+        left: 3px;
+        border-radius: 10px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    #aipaddle{
+        width: 20px;
+        background-color: lightgreen;
+        height: 100px;
+        position: absolute;
+        right: 3px;
+        border-radius: 10px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    #ball{
+        background-color: rgb(104, 104, 197);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    #hii{
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-top: 20%;
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <div id = "gamebox">
+        <div class = "scoreboard">
+            <div id = "userscore">0</div>
+            <div id = "aiscore">0</div>
+        </div>
+        <div class = "dashlinevertical"></div>
+        <div id = "userpaddle"></div>
+        <div id = "aipaddle"></div>
+        <div id = "ball"></div>
+        <center>
+            <div id = "hii">
+                <div id = "win"></div>
+            </div>
+        </center>
+    </div>
+</body>
+<script src = "/index.js"></script>
+</html>
